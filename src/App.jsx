@@ -50,6 +50,10 @@ const MenuListItem = styled.li`
             z-index: -1;
             left: -16px;
             top: 6px;
+
+            @media ${device.mobile} {
+                left: -9px;
+            }
         }
 
         &:hover {
@@ -59,6 +63,10 @@ const MenuListItem = styled.li`
                 border-radius: 16px;
                 width: calc(100% + 32px);
                 transition: width 0.2s ease-in;
+
+                @media ${device.mobile} {
+                    left: -16px;
+                }
             }
 
             a::after {
