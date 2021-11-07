@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Lottie from "react-lottie";
 import { Router, Link } from "@reach/router";
-import animationData from "../lotties/ForgetPassword.json";
+import animationData from "../lotties/forgetPassword.json";
 import Button from "../components/Button";
 import TextInput from "../components/TextInput";
 import styled from "styled-components";
