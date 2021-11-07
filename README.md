@@ -2,7 +2,7 @@
 
 Railsware Test
 
-After cloning and install the dependencies,
+After cloning install the dependencies,
 
 ### `yarn`
 
