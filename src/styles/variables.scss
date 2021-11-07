@@ -1,5 +1,4 @@
 :root {
-    --heading-font-family: "Montserrat", sans-serif;
     --body-font-family: "Roboto", sans-serif;
 
     //fonts
@@ -9,45 +8,19 @@
     --p2: 0.875rem;
     --p3: 0.75rem;
 
-    --h1: 2.5rem;
+    --h1: 2.25rem;
 
     //colors
-    --blue: #99c6ef;
-    --blue-02: #3d72a7;
-    --blue-03: #284d73;
-    --blue-04: #517f99;
-    --blue-05: #f1f5f8;
-    --blue-06: #517f99;
-
-    //box gradients
-
-    //default
-    --default-box-gradient: linear-gradient(90deg, #2170a2 0%, #85cbfa 100%);
-
-    //expired
-    --expired-box-gradient: linear-gradient(90deg, #eb3349 0%, #e99081 58.85%);
-
-    //expiring
-    --expiring-box-gradient: linear-gradient(90deg, #e65c00 0%, #f9d423 100%);
-
-    //complete
-    --completed-box-gradient: linear-gradient(
-        90deg,
-        #4cb8c4 0%,
-        #2bd9ad 57.81%
-    );
-
-    //end box gradients
-
-    --expired: #cc655f;
-    --expiring: #f1c752;
-    --complete: #64deb1;
-    --green: #6cb69d;
-    --light-gray: #adadad;
-    --gray: #9a9a9a;
-
-    --white: #fff;
-    --dirty-white: #fbfbfb;
+    --blue: #1a4f8b;
+    --blue-light: #30639e;
+    --fb-blue: #385c8e;
+    --fb-blue-light: #4976b6;
+    --google-red: #f14436;
+    --google-red-light: #ff6459;
+    --dark-red: #bf1541;
     --black: #000;
-    --el-bcg: #f1f1f1;
+    --white: #fff;
+    --gray-light: #b0b0b0;
+    --gray-dark: #767676;
+    --gray-inputs: #c3c3c3;
 }

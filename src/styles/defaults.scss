@@ -1,5 +1,4 @@
 //typography
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 html,
@@ -8,23 +7,8 @@ body {
     font-weight: var(--base-font-weight);
 }
 
-input[type="text"],
-input[type="date"],
-textarea,
-select,
-option {
-    color: var(--blue-06);
-}
-
-::-webkit-input-placeholder {
-    color: var(--blue-06);
-}
-::-moz-placeholder {
-    color: var(--blue-06);
-}
-:-ms-input-placeholder {
-    color: var(--blue-06);
-}
-:-moz-placeholder {
-    color: var(--blue-06);
+a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: var(--p1);
 }
