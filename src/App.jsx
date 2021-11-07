@@ -7,10 +7,14 @@ import ForgotPassword from "./pages/ForgotPassword";
 import { device } from "./helpers/breakpoints";
 import styled from "styled-components";
 
-const Header = styled.div``;
+const Header = styled.div`
+    position: fixed;
+    width: 100%;
+`;
 
 const MenuToggler = styled.div`
     position: fixed;
+    z-index: 1;
     top: 24px;
     right: 24px;
     font-size: var(--p2);
@@ -92,7 +96,7 @@ const MenuListItem = styled.li`
             top: -50px;
 
             &.is-opened {
-                right: calc(100% - 220px);
+                right: calc(100% - 205px);
             }
         }
     }
@@ -111,7 +115,7 @@ const MenuListItem = styled.li`
             top: -50px;
 
             &.is-opened {
-                right: calc(100% - 370px);
+                right: calc(100% - 343px);
             }
         }
     }
