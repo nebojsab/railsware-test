@@ -4,6 +4,8 @@ import lock from "../assets/images/lock.svg";
 import lockActive from "../assets/images/lock_active.svg";
 import user from "../assets/images/user.svg";
 import userActive from "../assets/images/user_active.svg";
+import card from "../assets/images/card.svg";
+import cardActive from "../assets/images/card_active.svg";
 import styled from "styled-components";
 
 const IconUser = styled.div`
@@ -26,7 +28,15 @@ const IconLock = styled.div`
     transition: ease-in 0.2s;
 `;
 
-const IconCard = styled.div``;
+const IconCard = styled.div`
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 0 9px 0 12px;
+    background-image: url(${card});
+    background-repeat: no-repeat;
+    transition: ease-in 0.2s;
+`;
 
 const InputWrapper = styled.div`
     width: 100%;
@@ -40,6 +50,16 @@ const InputWrapper = styled.div`
     justify-content: flex-start;
     transition: ease-in 0.2s;
 
+    &.text__field {
+        padding-left: 12px;
+    }
+
+    &.text__field--small {
+        max-width: 165px;
+        width: 100%;
+        padding-left: 12px;
+    }
+
     &:hover {
         border-color: var(--blue);
         ${IconUser} {
@@ -47,6 +67,9 @@ const InputWrapper = styled.div`
         }
         ${IconLock} {
             background-image: url(${lockActive});
+        }
+        ${IconCard} {
+            background-image: url(${cardActive});
         }
     }
 `;

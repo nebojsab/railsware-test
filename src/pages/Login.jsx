@@ -13,6 +13,7 @@ const LoginPage = styled.div`
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
+    margin: 0 auto;
     width: 100%;
 `;
 
@@ -34,27 +35,6 @@ const ForgotPasswordLink = styled.div`
     position: relative;
     justify-content: end;
     margin-top: 10px;
-
-    a {
-        position: relative;
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 0;
-            height: 1px;
-            background-color: var(--blue);
-            bottom: -4px;
-            left: 0;
-        }
-    }
-
-    &:hover {
-        a::after {
-            width: 100%;
-            transition: width ease-in 0.3s;
-        }
-    }
 `;
 
 const FormIllustration = styled.div`
@@ -120,7 +100,7 @@ export default function Login() {
                         <ForgotPasswordLink>
                             <Link to="/forgot-password">Forgot Password?</Link>
                         </ForgotPasswordLink>
-                        <Button type="submit" text="Log in" />
+                        <Button type="l-m" text="Log in" />
                         <SocialText>Or connect with social</SocialText>
                         <ButtonRow>
                             <Button type="small" text="facebook" />

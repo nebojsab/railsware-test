@@ -31,6 +31,48 @@ const ButtonComponent = styled.button`
         height: 50px;
         text-transform: uppercase;
         font-family: var(--body-font-family);
+        margin: 36px 0;
+
+        &:hover {
+            background-position: right top;
+        }
+    }
+
+    &.primary__button--red {
+        border-radius: 8px;
+        background: linear-gradient(
+            to bottom,
+            var(--red-light) 50%,
+            var(--red) 50%
+        );
+        background-size: 100% 200%;
+        background-position: left bottom;
+        min-width: 344px;
+        color: var(--white);
+        height: 50px;
+        text-transform: uppercase;
+        font-family: var(--body-font-family);
+        margin: 36px 0;
+
+        &:hover {
+            background-position: right top;
+        }
+    }
+
+    &.primary__button--lm {
+        border-radius: 8px;
+        background: linear-gradient(
+            to bottom,
+            var(--blue-light) 50%,
+            var(--blue) 50%
+        );
+        background-size: 100% 200%;
+        background-position: left bottom;
+        min-width: 344px;
+        color: var(--white);
+        height: 50px;
+        text-transform: uppercase;
+        font-family: var(--body-font-family);
         margin: 50px 0;
 
         &:hover {
@@ -92,6 +134,8 @@ const Button = ({ children, onClick, disabled, text, type }) => {
                 ? "button__small--red"
                 : type === "red"
                 ? "primary__button--red"
+                : type === "l-m"
+                ? "primary__button--lm"
                 : "primary__button"
         } 
     `}

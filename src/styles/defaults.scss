@@ -11,4 +11,20 @@ a {
     text-decoration: none;
     color: var(--blue);
     font-size: var(--p1);
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        background-color: var(--blue);
+        bottom: -4px;
+        left: 0;
+    }
+
+    &:hover::after {
+        width: 100%;
+        transition: width ease-in 0.3s;
+    }
 }
