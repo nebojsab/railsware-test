@@ -38,6 +38,35 @@ const MenuListItem = styled.li`
     text-align: right;
     width: 200px;
 
+    &.active {
+        a::before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: lightsalmon;
+            border-radius: 4px;
+            position: absolute;
+            z-index: -1;
+            left: -16px;
+            top: 6px;
+        }
+
+        &:hover {
+            a::before {
+                top: -6px;
+                height: 32px;
+                border-radius: 16px;
+                width: calc(100% + 32px);
+                transition: width 0.2s ease-in;
+            }
+
+            a::after {
+                content: none;
+            }
+        }
+    }
+
     @media ${device.mobile} {
         text-align: left;
         width: 124px;
@@ -130,7 +159,7 @@ const MenuListItem = styled.li`
 `;
 
 const MenuList = styled.ul`
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 0;
     list-style: none;
@@ -143,6 +172,7 @@ const MenuList = styled.ul`
 `;
 
 const App = () => {
+    const [activeMenu, setActiveMenu] = useState("login");
     const [isMenuOpen, setMenuOpen] = React.useState(false);
     const toggle = () => setMenuOpen((e) => !e);
 
@@ -161,28 +191,46 @@ const App = () => {
                     <MenuList>
                         <MenuListItem
                             className={`menu__list login ${
-                                isMenuOpen ? "is-opened" : ""
-                            }`}
+                                activeMenu == "login" ? "active" : ""
+                            } ${isMenuOpen ? "is-opened" : ""}`}
                         >
-                            <Link onClick={toggle} to="/">
+                            <Link
+                                onClick={() => {
+                                    toggle();
+                                    setActiveMenu("login");
+                                }}
+                                to="/"
+                            >
                                 Login
                             </Link>
                         </MenuListItem>
                         <MenuListItem
                             className={`menu__list pass ${
-                                isMenuOpen ? "is-opened" : ""
-                            }`}
+                                activeMenu == "pass" ? "active" : ""
+                            } ${isMenuOpen ? "is-opened" : ""}`}
                         >
-                            <Link onClick={toggle} to="/forgot-password">
+                            <Link
+                                onClick={() => {
+                                    toggle();
+                                    setActiveMenu("pass");
+                                }}
+                                to="/forgot-password"
+                            >
                                 Forgot Password
                             </Link>
                         </MenuListItem>
                         <MenuListItem
                             className={`menu__list card ${
-                                isMenuOpen ? "is-opened" : ""
-                            }`}
+                                activeMenu == "card" ? "active" : ""
+                            } ${isMenuOpen ? "is-opened" : ""}`}
                         >
-                            <Link onClick={toggle} to="/payment">
+                            <Link
+                                onClick={() => {
+                                    toggle();
+                                    setActiveMenu("card");
+                                }}
+                                to="/payment"
+                            >
                                 Get Pro
                             </Link>
                         </MenuListItem>

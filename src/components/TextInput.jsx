@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { device } from "../helpers/breakpoints";
 import lock from "../assets/images/lock.svg";
 import lockActive from "../assets/images/lock_active.svg";
@@ -60,6 +60,7 @@ const InputWrapper = styled.div`
         padding-left: 12px;
     }
 
+    &.focused,
     &:hover {
         border-color: var(--blue);
         ${IconUser} {
@@ -91,9 +92,13 @@ const InputComponent = styled.input`
 `;
 
 const TextInput = ({ onClick, disabled, placeholder, type, layout }) => {
+    const [hasFocus, setFocus] = useState(false);
+
     return (
         <InputWrapper
-            className={`
+            onFocus={() => setFocus(true)}
+            onBlur={() => setFocus(false)}
+            className={`${hasFocus ? "focused" : ""}
         ${
             layout === "small"
                 ? "text__field--small"

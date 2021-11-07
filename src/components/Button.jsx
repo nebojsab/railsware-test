@@ -11,6 +11,9 @@ const ButtonComponent = styled.button`
     cursor: pointer;
     transition: all ease-in-out 0.2s;
     font-size: var(--p1);
+    font-family: var(--body-font-family);
+    text-transform: uppercase;
+    color: var(--white);
     overflow: hidden;
 
     &:hover {
@@ -27,10 +30,7 @@ const ButtonComponent = styled.button`
         background-size: 100% 200%;
         background-position: left bottom;
         min-width: 344px;
-        color: var(--white);
         height: 50px;
-        text-transform: uppercase;
-        font-family: var(--body-font-family);
         margin: 36px 0;
 
         &:hover {
@@ -48,10 +48,7 @@ const ButtonComponent = styled.button`
         background-size: 100% 200%;
         background-position: left bottom;
         min-width: 344px;
-        color: var(--white);
         height: 50px;
-        text-transform: uppercase;
-        font-family: var(--body-font-family);
         margin: 36px 0;
 
         &:hover {
@@ -69,10 +66,7 @@ const ButtonComponent = styled.button`
         background-size: 100% 200%;
         background-position: left bottom;
         min-width: 344px;
-        color: var(--white);
         height: 50px;
-        text-transform: uppercase;
-        font-family: var(--body-font-family);
         margin: 50px 0;
 
         &:hover {
@@ -91,10 +85,7 @@ const ButtonComponent = styled.button`
         background-position: left bottom;
         max-width: 165px;
         width: 100%;
-        color: var(--white);
         height: 40px;
-        text-transform: capitalize;
-        font-family: var(--body-font-family);
 
         &:hover {
             background-position: right top;
@@ -112,10 +103,7 @@ const ButtonComponent = styled.button`
         background-position: left bottom;
         max-width: 165px;
         width: 100%;
-        color: var(--white);
         height: 40px;
-        text-transform: capitalize;
-        font-family: var(--body-font-family);
 
         &:hover {
             background-position: right top;
